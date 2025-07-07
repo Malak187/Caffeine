@@ -21,7 +21,10 @@ import com.example.caffeine.ui.screens.welcome_screen.components.WelcomeScreenBo
 import com.example.caffeine.ui.screens.welcome_screen.components.WelcomeScreenTitle
 
 @Composable
-fun WelcomeScreen(modifier: Modifier = Modifier) {
+fun WelcomeScreen(
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -37,7 +40,7 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
         ScreenFooter(
             buttonText = "bring my coffee",
             buttonIcon = painterResource(R.drawable.ic_cup),
-            onClick = {/*TODO*/ }
+            onClick = { onClick() }
         )
 
     }
@@ -47,6 +50,8 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
 @Composable
 private fun WelcomeScreenPrev() {
     CaffeineTheme {
-        WelcomeScreen()
+        WelcomeScreen(
+            onClick = {}
+        )
     }
 }
