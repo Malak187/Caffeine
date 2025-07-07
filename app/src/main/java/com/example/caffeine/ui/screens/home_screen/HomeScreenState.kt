@@ -1,6 +1,4 @@
-package com.example.caffeine.ui.home_screen
-
-import androidx.compose.ui.graphics.painter.Painter
+package com.example.caffeine.ui.screens.home_screen
 
 data class HomeScreenState(
     val coffeeCups: List<CoffeeCups> = emptyList()

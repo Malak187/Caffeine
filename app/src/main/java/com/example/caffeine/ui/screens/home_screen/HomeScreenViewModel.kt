@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.home_screen
+package com.example.caffeine.ui.screens.home_screen
 
 import androidx.lifecycle.ViewModel
 import com.example.caffeine.R
@@ -20,15 +20,15 @@ class HomeScreenViewModel : ViewModel() {
                 coffeeCups = listOf(
                     CoffeeCups(
                         title = "Espresso",
-                        photo = (R.drawable.im_espresso)
+                        photo = (R.drawable.im_espresso_coffee)
                     ),
                     CoffeeCups(
                         title = "Macchiato",
-                        photo = (R.drawable.im_macchiato)
+                        photo = (R.drawable.im_macchiato_coffee)
                     ),
                     CoffeeCups(
                         title = "Latte",
-                        photo = (R.drawable.im_latte)
+                        photo = (R.drawable.im_lattee_coffee)
                     ),
                     CoffeeCups(
                         title = "Black",

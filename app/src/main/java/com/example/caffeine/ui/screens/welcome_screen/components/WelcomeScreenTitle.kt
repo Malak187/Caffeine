@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.welcome_screen.components
+package com.example.caffeine.ui.screens.welcome_screen.components
 
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat

@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.welcome_screen
+package com.example.caffeine.ui.screens.welcome_screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -17,8 +17,8 @@ import com.example.caffeine.R
 import com.example.caffeine.ui.shared.ScreenFooter
 import com.example.caffeine.ui.shared.ScreenHeader
 import com.example.caffeine.ui.theme.CaffeineTheme
-import com.example.caffeine.ui.welcome_screen.components.WelcomeScreenBody
-import com.example.caffeine.ui.welcome_screen.components.WelcomeScreenTitle
+import com.example.caffeine.ui.screens.welcome_screen.components.WelcomeScreenBody
+import com.example.caffeine.ui.screens.welcome_screen.components.WelcomeScreenTitle
 
 @Composable
 fun WelcomeScreen(modifier: Modifier = Modifier) {

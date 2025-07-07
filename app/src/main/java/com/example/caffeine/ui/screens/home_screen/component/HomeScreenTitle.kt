@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.home_screen.component
+package com.example.caffeine.ui.screens.home_screen.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
