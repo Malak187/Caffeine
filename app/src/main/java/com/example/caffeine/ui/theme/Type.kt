@@ -57,29 +57,29 @@ val Typography = Typography(
     ),
     bodyMedium = TextStyle(
         fontFamily = FontFamily(
-            Font(R.font.urbanist_medium)
+            Font(R.font.urbanist_bold)
         ),
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Bold,
         fontSize = 20.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.25.sp
     ),
     bodySmall = TextStyle(
         fontFamily = FontFamily(
-            Font(R.font.urbanist)
+            Font(R.font.urbanist_medium)
         ),
-        fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
-        lineHeight = 14.sp,
+        fontWeight = FontWeight.Medium,
+        fontSize = 10.sp,
+        lineHeight = 10.sp,
         letterSpacing = 0.25.sp
     ),
     titleMedium = TextStyle(
         fontFamily = FontFamily(
-            Font(R.font.urbanist_semibold)
+            Font(R.font.urbanist_bold)
         ),
-        fontWeight = FontWeight.SemiBold,
-        fontSize = 20.sp,
-        lineHeight = 20.sp,
+        fontWeight = FontWeight.Bold,
+        fontSize = 24.sp,
+        lineHeight = 24.sp,
         letterSpacing = 0.25.sp
     ),
     displayMedium = TextStyle(

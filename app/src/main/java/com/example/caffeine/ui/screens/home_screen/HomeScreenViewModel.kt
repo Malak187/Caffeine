@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class HomeScreenViewModel : ViewModel() {
+class HomeScreenViewModel : ViewModel(), HomeScreenInteractionListener {
     private val _state = MutableStateFlow(HomeScreenState())
     val state = _state.asStateFlow()
 
@@ -18,23 +18,31 @@ class HomeScreenViewModel : ViewModel() {
         _state.update {
             it.copy(
                 coffeeCups = listOf(
-                    CoffeeCups(
+                    CoffeeCup(
                         title = "Espresso",
                         photo = (R.drawable.im_espresso_coffee)
                     ),
-                    CoffeeCups(
+                    CoffeeCup(
                         title = "Macchiato",
                         photo = (R.drawable.im_macchiato_coffee)
                     ),
-                    CoffeeCups(
+                    CoffeeCup(
                         title = "Latte",
                         photo = (R.drawable.im_lattee_coffee)
                     ),
-                    CoffeeCups(
+                    CoffeeCup(
                         title = "Black",
                         photo = (R.drawable.im_black_coffee)
                     ),
                 )
+            )
+        }
+    }
+
+    override fun onCupSelected(index: Int) {
+        _state.update {
+            it.copy(
+                selectedCupIndex = index
             )
         }
     }

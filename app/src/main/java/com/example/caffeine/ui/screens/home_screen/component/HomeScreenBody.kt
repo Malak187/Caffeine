@@ -21,6 +21,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
@@ -30,7 +31,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.lerp
 import com.example.caffeine.R
-import com.example.caffeine.ui.screens.home_screen.CoffeeCups
+import com.example.caffeine.ui.screens.home_screen.CoffeeCup
 import com.example.caffeine.ui.screens.home_screen.HomeScreenState
 import kotlin.math.absoluteValue
 
@@ -39,8 +40,13 @@ import kotlin.math.absoluteValue
 fun HomeScreenBody(
     modifier: Modifier = Modifier,
     uiState: HomeScreenState,
+    onCupSelected: (Int) -> Unit
 ) {
     val pagerState = rememberPagerState { uiState.coffeeCups.size }
+
+    LaunchedEffect(pagerState.currentPage) {
+        onCupSelected(pagerState.currentPage)
+    }
 
     CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
 
@@ -66,7 +72,7 @@ fun HomeScreenBody(
 @Composable
 private fun CoffeeTypeItem(
     modifier: Modifier = Modifier,
-    coffeeType: CoffeeCups,
+    coffeeType: CoffeeCup,
     pagerState: PagerState,
     pageIndex: Int
 ) {
@@ -109,7 +115,7 @@ private fun CoffeeTypeItem(
                     .size(66.dp)
                     .offset(y = 20.dp),
                 painter = painterResource(R.drawable.ic_logo),
-                contentDescription = coffeeType.title
+                contentDescription = "The Chance Coffee"
             )
         }
         Text(

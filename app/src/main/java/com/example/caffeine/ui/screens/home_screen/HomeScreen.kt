@@ -23,6 +23,8 @@ import com.example.caffeine.ui.theme.CaffeineTheme
 @Composable
 fun HomeScreen(
     uiState: HomeScreenState,
+    onClick: () -> Unit ,
+    listener: HomeScreenInteractionListener,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -44,11 +46,12 @@ fun HomeScreen(
         )
         HomeScreenBody(
             uiState = uiState,
+            onCupSelected = listener::onCupSelected,
         )
         ScreenFooter(
             buttonText = "Continue",
             buttonIcon = painterResource(R.drawable.ic_continue),
-            onClick = {/*TODO*/ },
+            onClick = { onClick() },
             modifier = Modifier
                 .padding(horizontal = 16.dp)
         )
@@ -56,12 +59,3 @@ fun HomeScreen(
     }
 }
 
-@Preview
-@Composable
-private fun HomeScreenPrev() {
-    CaffeineTheme {
-        HomeScreen(
-            uiState = HomeScreenState(),
-        )
-    }
-}

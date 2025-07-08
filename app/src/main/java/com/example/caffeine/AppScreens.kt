@@ -3,10 +3,13 @@ package com.example.caffeine
 import kotlinx.serialization.Serializable
 
 @Serializable
-object WelcomeScreen
+object WelcomeNavScreen
 
 @Serializable
-object HomeScreen
+object HomeNavScreen
 
 @Serializable
-object CoffeeOrderScreen
+data class CoffeeOrderNavScreen(
+    val title: String,
+    val photo: Int
+)
