@@ -33,7 +33,7 @@ fun WelcomeScreenTitle(modifier: Modifier = Modifier) {
             initialValue = 0.2f,
             targetValue = 1f,
             animationSpec = infiniteRepeatable(
-                animation = tween(500),
+                animation = tween(600),
                 repeatMode = RepeatMode.Reverse
             )
         )
@@ -43,7 +43,7 @@ fun WelcomeScreenTitle(modifier: Modifier = Modifier) {
             initialValue = 1f,
             targetValue = 0.2f,
             animationSpec = infiniteRepeatable(
-                animation = tween(500),
+                animation = tween(600),
                 repeatMode = RepeatMode.Reverse
             )
         )

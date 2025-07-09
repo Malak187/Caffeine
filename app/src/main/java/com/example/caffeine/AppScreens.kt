@@ -1,5 +1,6 @@
 package com.example.caffeine
 
+import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeSize
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -13,3 +14,18 @@ data class CoffeeOrderNavScreen(
     val title: String,
     val photo: Int
 )
+
+@Serializable
+data class FinishingOrderNavScreen(
+    val photo: Int,
+    val size: CoffeeSize,
+    val litres: CoffeeSize,
+)
+
+@Serializable
+data class CoffeeDoneNavScreen(
+    val photo: Int,
+)
+
+@Serializable
+object SnackPickerNavScreen

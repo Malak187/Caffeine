@@ -1,5 +1,6 @@
 package com.example.caffeine.ui.screens.coffee_order_screen.components
 
+import android.util.Log
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -65,12 +66,13 @@ fun CoffeeBeans(
 
         }
     }
-    Row (
-        modifier = Modifier.fillMaxWidth()
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
             .padding(bottom = 40.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
-    ){
+    ) {
         Text(
             text = "Low",
             style = MaterialTheme.typography.bodySmall,
@@ -123,7 +125,9 @@ fun CoffeeBeansOption(
                 color = backgroundColor,
                 shape = CircleShape
             )
-            .noRippleClickable { onClick() }
+            .noRippleClickable {
+                onClick()
+            }
 
     ) {
         Icon(

@@ -113,7 +113,7 @@ private fun CoffeeTypeItem(
             Image(
                 modifier = Modifier
                     .size(66.dp)
-                    .offset(y = 20.dp),
+                    .offset(y = 15.dp),
                 painter = painterResource(R.drawable.ic_logo),
                 contentDescription = "The Chance Coffee"
             )

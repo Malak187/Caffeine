@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.screens.coffee_order_screen.components
+package com.example.caffeine.ui.shared
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -11,31 +11,25 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.caffeine.R
-import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeOrderInteractionListener
-import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeOrderState
-import com.example.caffeine.ui.screens.coffee_order_screen.FallingCoffeeBeansAnimation
+import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeSize
 
 @Composable
 fun CoffeeOrderScreenBody(
-    uiState: CoffeeOrderState,
+    coffeePhoto: Int,
+    coffeeTitle: String,
+    coffeeLitres: CoffeeSize,
     cupHeight: Dp,
     cupWidth: Dp,
     logoSize: Dp,
@@ -44,25 +38,27 @@ fun CoffeeOrderScreenBody(
 
     Box(
         modifier = modifier
-            .fillMaxSize()
             .height(336.dp)
-            .width(cupWidth),
+            .fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
         Image(
-            modifier = Modifier.height(cupHeight),
-            painter = painterResource(uiState.coffeeType.photo),
-            contentDescription = uiState.coffeeType.title
+            modifier = Modifier
+                .height(cupHeight)
+                .width(cupWidth), // Apply width here
+            painter = painterResource(coffeePhoto),
+            contentDescription = coffeeTitle
         )
+
         Image(
             modifier = Modifier
                 .size(logoSize)
-                .offset(y = 20.dp),
+                .offset(y = 15.dp),
             painter = painterResource(R.drawable.ic_logo),
             contentDescription = "The Chance Coffee"
         )
         AnimatedContent(
-            targetState = uiState.coffeeType.litres,
+            targetState = coffeeLitres,
             transitionSpec = {
                 fadeIn(
                     animationSpec = tween(

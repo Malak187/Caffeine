@@ -41,12 +41,12 @@ fun WelcomeScreenBody(modifier: Modifier = Modifier) {
                 )
             )
 
-        val shadowAlpha = ((offset - (-10f)) / (16f - (-10f))) // normalized [0,1]
+        val shadowAlpha = ((offset - (-10f)) / (16f - (-10f)))
             .coerceIn(0f, 1f)
             .let { lerp(0.6f, 1f, it) }
 
         Image(
-            painter = painterResource(R.drawable.im_ghost),
+            painter = painterResource(R.drawable.im_ghost_launcher),
             contentDescription = null,
             modifier = Modifier
                 .padding(bottom = 8.dp)

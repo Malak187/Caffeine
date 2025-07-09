@@ -1,6 +1,7 @@
 package com.example.caffeine.ui.screens.coffee_order_screen.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -24,6 +25,7 @@ import com.example.caffeine.R
 @Composable
 fun CoffeeOrderScreenHeader(
     modifier: Modifier = Modifier,
+    onGoBackClick: () -> Unit ,
     title: String
 ) {
     Row(
@@ -38,7 +40,8 @@ fun CoffeeOrderScreenHeader(
             modifier = Modifier
                 .size(48.dp)
                 .clip(CircleShape)
-                .background(Color(0xFFF5F5F5)),
+                .background(Color(0xFFF5F5F5))
+                .clickable { onGoBackClick() },
             contentAlignment = Alignment.Center
         ) {
             Icon(

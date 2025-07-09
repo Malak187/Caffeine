@@ -2,6 +2,7 @@ package com.example.caffeine.ui.shared
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -29,14 +30,16 @@ fun ScreenHeader(modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Image(
-            painter = painterResource(R.drawable.im_ghost_profile),
+            painter = painterResource(R.drawable.im_ghost_profil),
             contentDescription = null,
             modifier = Modifier.size(48.dp),
         )
         Box(
-            modifier = Modifier.size(48.dp)
+            modifier = Modifier
+                .size(48.dp)
                 .clip(CircleShape)
-                .background(Color(0xFFF5F5F5)),
+                .background(Color(0xFFF5F5F5))
+                .noRippleClickable {},
             contentAlignment = Alignment.Center
         ) {
             Icon(

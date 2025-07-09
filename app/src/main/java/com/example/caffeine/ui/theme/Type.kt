@@ -21,11 +21,11 @@ val Typography = Typography(
     ),
     headlineSmall = TextStyle(
         fontFamily = FontFamily(
-            Font(R.font.urbanist_medium)
+            Font(R.font.urbanist_bold)
         ),
         fontWeight = FontWeight.Medium,
-        fontSize = 16.sp,
-        lineHeight = 20.sp,
+        fontSize = 14.sp,
+        lineHeight = 14.sp,
         letterSpacing = 0.25.sp
 
     ),
@@ -49,11 +49,13 @@ val Typography = Typography(
         letterSpacing = 0.25.sp
     ),
     labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        fontFamily = FontFamily(
+            Font(R.font.urbanist_bold)
+        ),
+        fontWeight = FontWeight.Bold,
+        fontSize = 10.sp,
+        lineHeight = 10.sp,
+        letterSpacing = 0.25.sp
     ),
     bodyMedium = TextStyle(
         fontFamily = FontFamily(
@@ -78,8 +80,8 @@ val Typography = Typography(
             Font(R.font.urbanist_bold)
         ),
         fontWeight = FontWeight.Bold,
-        fontSize = 24.sp,
-        lineHeight = 24.sp,
+        fontSize = 22.sp,
+        lineHeight = 22.sp,
         letterSpacing = 0.25.sp
     ),
     displayMedium = TextStyle(

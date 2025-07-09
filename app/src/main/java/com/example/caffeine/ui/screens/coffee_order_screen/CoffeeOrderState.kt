@@ -1,7 +1,6 @@
 package com.example.caffeine.ui.screens.coffee_order_screen
 
 import com.example.caffeine.R
-import com.example.caffeine.ui.screens.home_screen.CoffeeCup
 
 data class CoffeeOrderState(
     val coffeeType: CoffeeOrderCup = CoffeeOrderCup(
@@ -10,7 +9,9 @@ data class CoffeeOrderState(
         litres = CoffeeSize.MEDIUM,
         size = CoffeeSize.MEDIUM,
         beans = CoffeeBeans.LOW
-    )
+    ),
+    val animationKey: Int = 0,
+    val isAnimatingDown: Boolean = false
 )
 
 
@@ -28,9 +29,9 @@ enum class CoffeeSize(val litres: Int) {
     LARGE(400)
 }
 
-enum class CoffeeBeans {
-    LOW,
-    MEDIUM,
-    HIGH
+enum class CoffeeBeans(val index: Int) {
+    LOW(0),
+    MEDIUM(1),
+    HIGH(2)
 }
 
