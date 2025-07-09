@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.screens.done_order
+package com.example.caffeine.ui.screens.done_coffee
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -25,9 +25,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.caffeine.R
-import com.example.caffeine.ui.screens.done_order.components.CoffeeDoneScreenBody
-import com.example.caffeine.ui.screens.done_order.components.CoffeeDoneScreenHeader
-import com.example.caffeine.ui.screens.done_order.components.CoffeeSwitchButton
+import com.example.caffeine.ui.screens.done_coffee.components.CoffeeDoneScreenBody
+import com.example.caffeine.ui.screens.done_coffee.components.CoffeeDoneScreenHeader
+import com.example.caffeine.ui.screens.done_coffee.components.CoffeeSwitchButton
 import com.example.caffeine.ui.shared.ScreenFooter
 import com.example.caffeine.ui.theme.CaffeineTheme
 

@@ -5,22 +5,45 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.caffeine.ui.screens.pick_snack.components.SnackPickerPager
+import com.example.caffeine.ui.screens.pick_snack.components.SnackPickerScreenHeader
+import com.example.caffeine.ui.theme.CaffeineTheme
 
 @Composable
-fun SnackPickerScreen(modifier: Modifier = Modifier) {
+fun SnackPickerScreen(
+    snacks: List<Int>,
+    onClosesClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Column(
         modifier = modifier
             .fillMaxSize()
             .background(Color.White)
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp)
             .statusBarsPadding()
     ) {
+        SnackPickerScreenHeader(
+            onCloseClick = onClosesClick,
+            modifier = Modifier
+                .padding(start = 16.dp, top = 16.dp)
+        )
+        SnackPickerPager(
+            snacks = snacks
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun SnackPickerScreenPreview() {
+    CaffeineTheme {
+        SnackPickerScreen(
+            snacks = Snacks.snacksOptions,
+            {}
+        )
     }
 }

@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.screens.done_order
+package com.example.caffeine.ui.screens.done_coffee
 
 import androidx.lifecycle.ViewModel
 import com.example.caffeine.R

@@ -21,9 +21,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.caffeine.ui.modifier.dropShadow
 import com.example.caffeine.ui.screens.coffee_order.CoffeeOrderState
 import com.example.caffeine.ui.screens.coffee_order.CoffeeSize
-import com.example.caffeine.ui.shared.noRippleClickable
+import com.example.caffeine.ui.modifier.noRippleClickable
 
 @Composable
 fun CoffeeSizes(
@@ -94,6 +95,18 @@ fun SizeOption(
     Box(
         contentAlignment = Alignment.Center,
         modifier = modifier
+            .then(
+                if (isSelected) {
+                    Modifier.dropShadow(
+                        shape = CircleShape,
+                        color = Color(0xffB94B23).copy(alpha = 0.5f),
+                        offsetX = 0.dp,
+                        offsetY = 6.dp
+                    )
+                } else {
+                    Modifier
+                }
+            )
             .size(40.dp)
             .clip(CircleShape)
             .background(

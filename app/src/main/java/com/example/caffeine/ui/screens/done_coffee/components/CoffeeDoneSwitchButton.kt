@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.screens.done_order.components
+package com.example.caffeine.ui.screens.done_coffee.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

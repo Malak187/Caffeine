@@ -1,4 +1,4 @@
-package com.example.caffeine.ui.screens.done_order.components
+package com.example.caffeine.ui.screens.done_coffee.components
 
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -26,7 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.caffeine.R
-import com.example.caffeine.ui.shared.noRippleClickable
+import com.example.caffeine.ui.modifier.noRippleClickable
 
 @Composable
 fun CoffeeSwitchButton(

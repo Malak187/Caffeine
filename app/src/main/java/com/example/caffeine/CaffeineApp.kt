@@ -14,13 +14,14 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.example.caffeine.ui.screens.coffee_order.CoffeeOrderScreen
 import com.example.caffeine.ui.screens.coffee_order.CoffeeOrderViewModel
-import com.example.caffeine.ui.screens.done_order.CoffeeDoneScreen
-import com.example.caffeine.ui.screens.done_order.CoffeeDoneViewModel
+import com.example.caffeine.ui.screens.done_coffee.CoffeeDoneScreen
+import com.example.caffeine.ui.screens.done_coffee.CoffeeDoneViewModel
 import com.example.caffeine.ui.screens.loading_order.FinishingOrderScreen
 import com.example.caffeine.ui.screens.loading_order.FinishingOrderViewModel
 import com.example.caffeine.ui.screens.home.HomeScreen
 import com.example.caffeine.ui.screens.home.HomeScreenViewModel
 import com.example.caffeine.ui.screens.pick_snack.SnackPickerScreen
+import com.example.caffeine.ui.screens.pick_snack.Snacks
 import com.example.caffeine.ui.screens.welcome.WelcomeScreen
 import org.koin.androidx.compose.koinViewModel
 
@@ -135,7 +136,14 @@ fun CaffeineApp(
             }
 
             composable<SnackPickerNavScreen>{
-                SnackPickerScreen()
+                SnackPickerScreen(
+                    snacks = Snacks.snacksOptions,
+                    onClosesClick = {
+                        navController.navigate(WelcomeNavScreen) {
+                            popUpTo(0) { inclusive = true }
+                        }
+                    }
+                )
             }
         }
     }
