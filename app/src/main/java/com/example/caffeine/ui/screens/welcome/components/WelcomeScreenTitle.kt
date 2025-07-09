@@ -115,17 +115,9 @@ fun WelcomeScreenTitle(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .size(16.dp)
                     .offset(x = 100.dp, y = 16.dp)
-                    .alpha(alphaPositive)
+                    .alpha(alphaNegative)
             )
         }
 
     }
-//        Image(
-//            painter = painterResource(R.drawable.ic_star),
-//            contentDescription = null,
-//            modifier = Modifier
-//                .align(Alignment.End)
-//                .size(16.dp)
-//                .alpha(alpha)
-//        )
 }
