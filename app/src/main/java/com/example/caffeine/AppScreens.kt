@@ -1,6 +1,6 @@
 package com.example.caffeine
 
-import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeSize
+import com.example.caffeine.ui.screens.coffee_order.CoffeeSize
 import kotlinx.serialization.Serializable
 
 @Serializable

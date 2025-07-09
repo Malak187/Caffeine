@@ -23,7 +23,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.caffeine.R
-import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeSize
+import com.example.caffeine.ui.screens.coffee_order.CoffeeSize
 
 @Composable
 fun CoffeeOrderScreenBody(

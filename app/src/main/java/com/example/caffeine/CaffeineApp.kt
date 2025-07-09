@@ -12,16 +12,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeOrderScreen
-import com.example.caffeine.ui.screens.coffee_order_screen.CoffeeOrderViewModel
-import com.example.caffeine.ui.screens.done_coffee_screen.CoffeeDoneScreen
-import com.example.caffeine.ui.screens.done_coffee_screen.CoffeeDoneViewModel
-import com.example.caffeine.ui.screens.finishing_order_screen.FinishingOrderScreen
-import com.example.caffeine.ui.screens.finishing_order_screen.FinishingOrderViewModel
-import com.example.caffeine.ui.screens.home_screen.HomeScreen
-import com.example.caffeine.ui.screens.home_screen.HomeScreenViewModel
+import com.example.caffeine.ui.screens.coffee_order.CoffeeOrderScreen
+import com.example.caffeine.ui.screens.coffee_order.CoffeeOrderViewModel
+import com.example.caffeine.ui.screens.done_order.CoffeeDoneScreen
+import com.example.caffeine.ui.screens.done_order.CoffeeDoneViewModel
+import com.example.caffeine.ui.screens.loading_order.FinishingOrderScreen
+import com.example.caffeine.ui.screens.loading_order.FinishingOrderViewModel
+import com.example.caffeine.ui.screens.home.HomeScreen
+import com.example.caffeine.ui.screens.home.HomeScreenViewModel
 import com.example.caffeine.ui.screens.pick_snack.SnackPickerScreen
-import com.example.caffeine.ui.screens.welcome_screen.WelcomeScreen
+import com.example.caffeine.ui.screens.welcome.WelcomeScreen
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
