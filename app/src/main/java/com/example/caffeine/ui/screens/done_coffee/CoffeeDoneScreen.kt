@@ -47,11 +47,10 @@ fun CoffeeDoneScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
+            .statusBarsPadding()
             .background(Color.White)
             .verticalScroll(rememberScrollState())
             .padding(16.dp)
-            .statusBarsPadding()
-
     ) {
         CoffeeDoneScreenHeader(
             onCloseClick = onClosesClick,

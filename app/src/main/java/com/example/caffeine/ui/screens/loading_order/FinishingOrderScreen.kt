@@ -39,6 +39,7 @@ fun FinishingOrderScreen(
     }
     Box(
         modifier = modifier
+            .statusBarsPadding()
             .fillMaxSize()
             .background(Color.White)
     ) {
@@ -49,7 +50,6 @@ fun FinishingOrderScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(vertical = 16.dp)
                 .padding(top = 108.dp)
-                .statusBarsPadding()
         ) {
             CoffeeOrderScreenBody(
                 coffeePhoto = uiState.coffeeType.photo,

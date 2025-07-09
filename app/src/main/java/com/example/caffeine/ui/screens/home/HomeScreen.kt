@@ -28,11 +28,10 @@ fun HomeScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
+            .statusBarsPadding()
             .background(Color.White)
             .verticalScroll(rememberScrollState())
             .padding(vertical = 16.dp)
-            .statusBarsPadding()
-
     ) {
         ScreenHeader(
             modifier = Modifier

@@ -18,13 +18,14 @@ import com.example.caffeine.ui.theme.CaffeineTheme
 fun SnackPickerScreen(
     snacks: List<Int>,
     onClosesClick: () -> Unit,
+    onSnackClick: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.White)
             .statusBarsPadding()
+            .background(Color.White)
     ) {
         SnackPickerScreenHeader(
             onCloseClick = onClosesClick,
@@ -32,7 +33,8 @@ fun SnackPickerScreen(
                 .padding(start = 16.dp, top = 16.dp)
         )
         SnackPickerPager(
-            snacks = snacks
+            snacks = snacks,
+            onSnackClick = onSnackClick,
         )
     }
 }
@@ -43,6 +45,7 @@ private fun SnackPickerScreenPreview() {
     CaffeineTheme {
         SnackPickerScreen(
             snacks = Snacks.snacksOptions,
+            {},
             {}
         )
     }

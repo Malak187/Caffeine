@@ -30,7 +30,8 @@ import kotlin.math.abs
 @Composable
 fun SnackPickerPager(
     snacks: List<Int>,
-    onSnackClick: (Int) -> Unit = {}
+    onSnackClick: (Int) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     val pagerState = rememberPagerState(pageCount = { snacks.size })
     val configuration = LocalConfiguration.current
@@ -39,7 +40,7 @@ fun SnackPickerPager(
 
     VerticalPager(
         state = pagerState,
-        modifier = Modifier
+        modifier = modifier
             .padding(top = 12.dp)
             .fillMaxSize()
             .offset(x = -screenWidth * 0.2f),

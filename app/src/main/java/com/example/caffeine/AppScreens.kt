@@ -29,3 +29,9 @@ data class CoffeeDoneNavScreen(
 
 @Serializable
 object SnackPickerNavScreen
+
+@Serializable
+data class SnackDoneNavScreen(
+    val photo: Int,
+
+)

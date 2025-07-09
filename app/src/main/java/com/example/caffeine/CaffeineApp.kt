@@ -16,6 +16,8 @@ import com.example.caffeine.ui.screens.coffee_order.CoffeeOrderScreen
 import com.example.caffeine.ui.screens.coffee_order.CoffeeOrderViewModel
 import com.example.caffeine.ui.screens.done_coffee.CoffeeDoneScreen
 import com.example.caffeine.ui.screens.done_coffee.CoffeeDoneViewModel
+import com.example.caffeine.ui.screens.done_snack.SnackDoneScreen
+import com.example.caffeine.ui.screens.done_snack.SnackDoneViewModel
 import com.example.caffeine.ui.screens.loading_order.FinishingOrderScreen
 import com.example.caffeine.ui.screens.loading_order.FinishingOrderViewModel
 import com.example.caffeine.ui.screens.home.HomeScreen
@@ -139,6 +141,31 @@ fun CaffeineApp(
                 SnackPickerScreen(
                     snacks = Snacks.snacksOptions,
                     onClosesClick = {
+                        navController.navigate(WelcomeNavScreen) {
+                            popUpTo(0) { inclusive = true }
+                        }
+                    },
+                    onSnackClick = {
+                        navController.navigate(
+                            SnackDoneNavScreen(it)
+                        )
+                    }
+                )
+            }
+
+            composable<SnackDoneNavScreen>{
+                val args = it.toRoute<SnackDoneNavScreen>()
+                val snackDoneViewModel: SnackDoneViewModel = koinViewModel()
+                val snackPhoto by snackDoneViewModel.snackPhoto.collectAsStateWithLifecycle()
+                LaunchedEffect(Unit) {
+                    snackDoneViewModel.loadSnackPhoto(args.photo)
+                }
+
+
+                SnackDoneScreen(
+                    snackPhoto = snackPhoto,
+                    modifier = Modifier.fillMaxSize(),
+                    onCloseClick = {
                         navController.navigate(WelcomeNavScreen) {
                             popUpTo(0) { inclusive = true }
                         }

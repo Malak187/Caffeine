@@ -76,6 +76,15 @@ fun CoffeeOrderScreen(
         animationSpec = tween(1000),
     )
 
+    val animatedBoxHeight by animateDpAsState(
+        targetValue = when (uiState.coffeeType.size) {
+            CoffeeSize.SMALL -> 200.dp
+            CoffeeSize.MEDIUM -> 180.dp
+            CoffeeSize.LARGE -> 160.dp
+        },
+        animationSpec = tween(1000),
+    )
+
 
     LaunchedEffect(uiState.animationKey) {
         if (uiState.animationKey > 0) {
@@ -111,6 +120,7 @@ fun CoffeeOrderScreen(
     }
     Box(
         modifier = modifier
+            .statusBarsPadding()
             .fillMaxSize()
             .background(Color.White)
     ) {
@@ -120,7 +130,6 @@ fun CoffeeOrderScreen(
                 .background(Color.White)
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp)
-                .statusBarsPadding()
         ) {
             CoffeeOrderScreenHeader(
                 title = uiState.coffeeType.title,
@@ -157,7 +166,7 @@ fun CoffeeOrderScreen(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(180.dp + (300.dp - animatedCupHeight))
+                    .height(animatedBoxHeight )
                     .align(Alignment.TopCenter)
                     .clipToBounds()
             ) {

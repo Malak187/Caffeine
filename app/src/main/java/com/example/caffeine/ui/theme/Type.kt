@@ -12,12 +12,12 @@ import com.example.caffeine.R
 val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily(
-            Font(R.font.urbanist_semibold)
+            Font(R.font.sniglet)
         ),
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
+        fontSize = 20.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.25.sp
     ),
     headlineSmall = TextStyle(
         fontFamily = FontFamily(
